@@ -10,6 +10,12 @@ to_drop = df[df['Literacy Rate (%)'].isnull()].index
 df.drop(to_drop, inplace=True)
 with_median = df['Population'].median()
 df['Population'].fillna(with_median, inplace=True)
+
+
+df_region = pd.get_dummies(df['Region'], prefix='Region')
+
+df = pd.concat([df, df_region], axis=1)
+
 print(df)     
 
 plt.scatter(df['Population'], df['Literacy Rate (%)'])
