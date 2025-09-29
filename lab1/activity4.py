@@ -18,4 +18,7 @@ plt.xlabel('Attendance')
 plt.ylabel('Marks')
 plt.grid(True)
 plt.show()
+
+
+df  = pd.get_dummies(df, columns=['Name'], drop_first=True)
 print(df.head())
