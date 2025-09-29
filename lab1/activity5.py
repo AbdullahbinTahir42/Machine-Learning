@@ -27,3 +27,5 @@ plt.boxplot(df["Salary"])
 plt.title("Box plot of Salary")
 plt.ylabel("Salary")    
 plt.show()
+
+#yes Zara’s salary should be treated as an outlier because it is significantly higher than the other salaries in the dataset.
